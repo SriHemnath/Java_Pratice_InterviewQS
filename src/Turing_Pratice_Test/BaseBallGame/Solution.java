@@ -1,4 +1,4 @@
-package Turing_Pratice_Test;
+package Turing_Pratice_Test.BaseBallGame;
 
 import java.util.Scanner;
 import java.util.Stack;
