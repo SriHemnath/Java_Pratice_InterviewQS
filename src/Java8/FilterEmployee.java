@@ -1,4 +1,4 @@
-package ExploreJava8;
+package Java8;
 
 import POJO.Employee;
 
