@@ -19,5 +19,8 @@ class Mainclass {
         MyClass obj = new MyClass();
         obj.log("logging something...");
         obj.method1();
+        Interface1 i1 = () -> System.out.println("print something"); //functional interface implementation
+        i1.method1();
+        i1.log("Hemnath"); //default method
     }
 }
