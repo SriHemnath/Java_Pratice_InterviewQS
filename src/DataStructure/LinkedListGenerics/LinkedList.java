@@ -62,6 +62,17 @@ public class LinkedList<T> {
         }
     }
 
+    public void printReverse() {
+        printReverse(head);
+    }
+
+    private void printReverse(Node<T> node) {
+        if (node == null) {
+            return;
+        }
+        printReverse(node.next);
+        System.out.println(node.data);
+    }
     public int size(){
         return this.size;
     }

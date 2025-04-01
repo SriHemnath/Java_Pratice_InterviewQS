@@ -1,5 +1,7 @@
 package DataStructure.LinkedListGenerics;
 
+import java.util.Arrays;
+
 public class TestLLGenerics {
     public static void main(String[] args) {
         LinkedList<String> strList = new LinkedList<>();
@@ -15,5 +17,6 @@ public class TestLLGenerics {
         intList.add(1);
         intList.print();
         System.out.println("Size of integer list:"+intList.size());
+        intList.printReverse();
     }
 }
