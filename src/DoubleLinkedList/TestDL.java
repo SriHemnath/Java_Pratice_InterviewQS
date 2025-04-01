@@ -7,6 +7,15 @@ public class TestDL {
         dl.add("Karthick");
         dl.add("Jack");
         dl.print();
+        System.out.println("after add first");
+        dl.addFirst("Samantha");
         dl.printReverse();
+
+        dl.remove();
+        System.out.println("AFTER REMOVING LAST:");
+        dl.print();
+
+        dl.removeFirst();
+        dl.print();
     }
 }

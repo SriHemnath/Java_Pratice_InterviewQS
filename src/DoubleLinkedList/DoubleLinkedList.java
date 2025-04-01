@@ -34,6 +34,41 @@ public class DoubleLinkedList<T> {
         size++;
     }
 
+    public void addFirst(T value){
+        if (this.head == null){
+            add(value);
+            return;
+        }
+        Node<T> newNode = new Node<T>(value);
+        newNode.next = head;
+        newNode.prev = null;
+        head.prev = newNode;
+        head=newNode;
+    }
+
+    public void remove(){
+        if (size==1){
+            this.head.data =null;
+            size--;
+            return;
+        }
+        Node<T> current = tail.prev;
+        current.next = null;
+        size--;
+    }
+
+    public void removeFirst(){
+        if (this.head==null) return;
+        if (size ==1) {
+            this.head.data = null;
+            size--;
+        }
+        Node<T> current = head;
+        head = current.next;
+        head.prev =null;
+        size--;
+    }
+
     public void print(){
         Node<T> current = head;
         while (current!=null){
