@@ -2,9 +2,8 @@ package GeneralProblems.FunctionalProgramming;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class StringManipulation {
+public class StringPrograms {
     public static void main(String[] args) {
         //        Print all courses individually
         List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker", "Kubernetes");
