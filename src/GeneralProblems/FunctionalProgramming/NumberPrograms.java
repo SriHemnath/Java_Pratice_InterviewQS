@@ -3,6 +3,7 @@ package GeneralProblems.FunctionalProgramming;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 import java.util.stream.IntStream;
@@ -48,11 +49,20 @@ public class NumberPrograms {
         System.out.println("Sum of even numbers: " + sumEven.orElse(0));
 
 //        Create a List with Even Numbers Filtered from the Numbers List
-        List<Integer> evenNumbs = intList.stream().filter(evenPredicate).toList();
+        List<Integer> evenNumbs = intList.stream().filter(NumberPrograms::isEven).toList();
         System.out.println(evenNumbs);
+
+//        find max value
+        int maxvalue = intList.stream().max(Integer::compare).orElse(0);
+        int min = intList.stream().reduce(Integer.MAX_VALUE, (x, y) -> x < y ? x : y);
+        System.out.println("Max value: "+maxvalue+", Minimum value: "+min);
     }
 
     private static void print(int number) {
         System.out.println(number); // Print the number
+    }
+
+    private static boolean isEven(int number) {
+        return number%2==0;
     }
 }
